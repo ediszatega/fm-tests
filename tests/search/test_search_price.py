@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 
-def test_product_details(driver, wait):
+def test_search_price(driver, wait):
     min_price = "699"
     max_price = "799"
     price_range = range(int(min_price), int(max_price) + 1)

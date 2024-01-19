@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
-def test_product_details(driver, wait):
+def test_remove_from_cart(driver, wait):
     empty_cart_text = "No products added to the cart"
     
     nav_laptopi_element = (By.XPATH, "//*[text()='Laptopi']")
