@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
-def test_correct_search(driver, wait):
+def test_search_correct(driver, wait):
     search_text = "AMD"
 
     search_field = (By.NAME, 's')
