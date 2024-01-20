@@ -22,6 +22,11 @@ def test_reset_filters(driver, wait):
     driver.execute_script("arguments[0].scrollIntoView(true);", wait.until(EC.presence_of_element_located(btn_reset)))
     wait_btn_reset = wait.until(EC.element_to_be_clickable(btn_reset))
     wait_btn_reset.click()
-
     time.sleep(5)
+
+    element = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "posts-wrap products-container products products pcols-lg-4 pcols-md-3 pcols-sm-3 pcols-xs-3 pcols-ls-2 has-ccols-spacing")))
+
+    assert element
+
+
 
