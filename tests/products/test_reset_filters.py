@@ -13,10 +13,12 @@ def test_reset_filters(driver, wait):
     wait_laptopi_nav.click()
 
     cb_filter = (By.XPATH, "//span[text()='Ryzen 5 5500U']")
+    driver.execute_script("arguments[0].scrollIntoView(true);", wait.until(EC.presence_of_element_located(cb_filter)))
     wait_cb_filter = wait.until(EC.element_to_be_clickable(cb_filter))
     wait_cb_filter.click()
-
-    btn_reset = (By.CLASS_NAME, 'wcpf-button wcpf-button-action-reset')
+    wait.until(EC.staleness_of(wait_cb_filter))
+    
+    btn_reset = (By.XPATH, "//*[text()='Reset']")
     driver.execute_script("arguments[0].scrollIntoView(true);", wait.until(EC.presence_of_element_located(btn_reset)))
     wait_btn_reset = wait.until(EC.element_to_be_clickable(btn_reset))
     wait_btn_reset.click()
