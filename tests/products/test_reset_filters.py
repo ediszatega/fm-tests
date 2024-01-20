@@ -24,9 +24,6 @@ def test_reset_filters(driver, wait):
     wait_btn_reset.click()
     time.sleep(5)
 
-    element = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "posts-wrap products-container products products pcols-lg-4 pcols-md-3 pcols-sm-3 pcols-xs-3 pcols-ls-2 has-ccols-spacing")))
-
-    assert element
-
-
-
+    element = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "product-inner")))
+    
+    assert element                          
